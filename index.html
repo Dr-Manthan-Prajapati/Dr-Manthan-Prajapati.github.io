@@ -3,117 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Manthan Prajapati | Medical Portfolio</title>
+    <title>Dr. Manthan Prajapati | MD Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --med-blue: #003366; --gold-accent: #b08d57; --bg-light: #f4f7f9; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: var(--bg-light); color: #333; }
+        :root { --med-blue: #0a3d62; --gold: #d4af37; --glass: rgba(255, 255, 255, 0.9); }
+        body { font-family: 'Inter', sans-serif; background-color: #f4f7f6; scroll-behavior: smooth; }
         
-        /* Header & Hero */
-        .hero { background: linear-gradient(rgba(0,51,102,0.9), rgba(0,51,102,0.9)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80'); 
-                background-size: cover; color: white; padding: 80px 0; border-bottom: 5px solid var(--gold-accent); }
-        .profile-img { width: 200px; height: 200px; object-fit: cover; border: 4px solid white; border-radius: 50%; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        /* Hero Section with your Background Photo */
+        .hero { 
+            background: linear-gradient(rgba(10, 61, 98, 0.8), rgba(10, 61, 98, 0.8)), url('hero-bg.jpg');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            color: white; padding: 120px 0; text-align: center;
+        }
+        .profile-img { width: 220px; height: 220px; object-fit: cover; border: 6px solid white; border-radius: 50%; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+
+        /* Block-Wise Sections */
+        section { padding: 90px 0; }
+        .section-title { font-weight: 800; color: var(--med-blue); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 40px; text-align: center; }
         
-        /* Blocks */
-        .card { border: none; border-radius: 0; border-top: 4px solid var(--med-blue); box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .section-title { font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--med-blue); margin-bottom: 25px; border-bottom: 2px solid #ddd; display: inline-block; }
+        /* Gallery System */
+        .filter-btn { border: 2px solid var(--med-blue); color: var(--med-blue); background: transparent; padding: 8px 25px; margin: 5px; font-weight: bold; transition: 0.3s; }
+        .filter-btn:hover, .filter-btn.active { background: var(--med-blue); color: white; }
         
-        /* Buttons & Icons */
-        .btn-med { background-color: var(--gold-accent); color: white; font-weight: 600; border-radius: 0; padding: 12px 30px; transition: 0.3s; text-decoration: none; }
-        .btn-med:hover { background-color: var(--med-blue); color: white; }
-        .social-icon { font-size: 1.5rem; color: white; margin: 0 15px; transition: 0.3s; }
-        .social-icon:hover { color: var(--gold-accent); }
+        .gallery-item { margin-bottom: 30px; display: block; }
+        .gallery-img { width: 100%; border-radius: 10px; cursor: pointer; transition: 0.4s; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .gallery-img:hover { transform: scale(1.03); box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+
+        .card-custom { background: white; border: none; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .footer { background: #1a1a1a; color: white; padding: 50px 0; }
     </style>
 </head>
 <body>
 
-<header class="hero text-center">
+<header class="hero">
     <div class="container">
-        <img src="profile.jpg" alt="Dr. Manthan Prajapati" class="profile-img mb-4">
-        <h1 class="display-5 fw-bold">Dr. Manthan Prajapati, MD</h1>
-        <p class="lead text-uppercase mb-4" style="letter-spacing: 2px;">Internal Medicine | ECFMG Certified | USMLE Step 2 CK: 239</p>
-        <div class="d-flex justify-content-center align-items-center">
-            <a href="https://www.linkedin.com/in/manthan-prajapati-153740163" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:prajapatimanthan9@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-            <a href="Dr_Manthan_CV.pdf" class="btn-med ms-3" download>DOWNLOAD CURRICULUM VITAE</a>
+        <img src="pfl.jpg" alt="Dr. Manthan Prajapati" class="profile-img mb-4">
+        <h1 class="display-3 fw-bold">Dr. Manthan Prajapati</h1>
+        <p class="lead text-uppercase mb-4">ECFMG Certified | USMLE Step 2 CK: 239 | Gujarat Medical Council</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="https://www.linkedin.com/in/manthan-prajapati-153740163" class="btn btn-outline-light btn-lg px-4"><i class="fab fa-linkedin me-2"></i>LinkedIn</a>
+            <a href="https://www.youtube.com/@manthanr.p.1105" target="_blank" class="btn btn-danger btn-lg px-4"><i class="fab fa-youtube me-2"></i>YouTube</a>
         </div>
     </div>
 </header>
 
-<main class="container my-5">
-    <div class="row">
+<div class="container" style="margin-top: -50px;">
+    <div class="row g-3">
         <div class="col-md-4">
-            <h2 class="section-title">Credentials</h2>
-            <div class="card p-4">
-                <h6 class="fw-bold"><i class="fas fa-university me-2"></i>MD - Doctor of Medicine</h6>
-                <p class="small">Penza State University, Russia (2017-2023)</p>
-                <hr>
-                <h6 class="fw-bold"><i class="fas fa-certificate me-2"></i>Licensure</h6>
-                <p class="small mb-1">ECFMG Certified (2025)</p>
-                <p class="small">Gujarat Medical Council (India)</p>
-                <hr>
-                <h6 class="fw-bold"><i class="fas fa-language me-2"></i>Languages</h6>
-                <p class="small">English, Gujarati, Hindi, Russian</p>
-            </div>
+            <div class="card-custom text-center py-4"><h3 class="fw-bold text-primary mb-0">239</h3><small class="text-muted text-uppercase">USMLE Step 2 Score</small></div>
         </div>
-
-        <div class="col-md-8">
-            <h2 class="section-title">Clinical Experience</h2>
-            
-            <div class="card p-4">
-                <div class="d-flex justify-content-between">
-                    <h5 class="fw-bold text-primary">US Clinical Rotations (Internal Medicine)</h5>
-                    <span class="badge bg-secondary">2025</span>
-                </div>
-                <p class="small text-muted mb-3">UChicago Medicine & Rush University Medical Center, Chicago, IL</p>
-                <ul class="small">
-                    [span_1](start_span)<li>Managed complex comorbidities including cardiorenal syndrome and diabetic nephropathy[span_1](end_span).</li>
-                    [span_2](start_span)<li>Utilized EPIC and Avalon EMR systems for patient workups and treatment planning[span_2](end_span).</li>
-                </ul>
-            </div>
-
-            <div class="card p-4">
-                <div class="d-flex justify-content-between">
-                    <h5 class="fw-bold text-primary">Community Health Leadership</h5>
-                    <span class="badge bg-secondary">2024</span>
-                </div>
-                <p class="small text-muted mb-3">GMERS Medical College, Gujarat, India</p>
-                <ul class="small">
-                    [span_3](start_span)<li>Managed a high-volume rural OPD with a peak of 182 patients in a single day[span_3](end_span).</li>
-                    [span_4](start_span)[span_5](start_span)<li>Orchestrated logistics for rural health camps serving 500+ women and children[span_4](end_span)[span_5](end_span).</li>
-                </ul>
-            </div>
+        <div class="col-md-4">
+            <div class="card-custom text-center py-4"><h3 class="fw-bold text-primary mb-0">182</h3><small class="text-muted text-uppercase">Single Day OPD Census</small></div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-custom text-center py-4"><h3 class="fw-bold text-primary mb-0">Certified</h3><small class="text-muted text-uppercase">ECFMG (2025)</small></div>
         </div>
     </div>
+</div>
 
-    <div class="row mt-4">
-        <div class="col-12">
-            <h2 class="section-title">Peer-Reviewed Research</h2>
-            <div class="card p-4">
-                <div class="row">
-                    <div class="col-md-6 border-end">
-                        <h6 class="fw-bold">Cardiovascular Pharmacology</h6>
-                        [span_6](start_span)<p class="small">Published in <i>Cureus Journal of Medical Science</i> (2025) regarding PDE-5 inhibitors in Heart Failure[span_6](end_span).</p>
-                    </div>
-                    <div class="col-md-6 ps-md-4">
-                        <h6 class="fw-bold">Antimicrobial Stewardship</h6>
-                        [span_7](start_span)<p class="small">Observational study on optimizing discharge antibiotic prescriptions in tertiary care settings[span_7](end_span).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-
-<footer class="bg-dark text-white text-center py-4">
+<section id="gallery">
     <div class="container">
-        <p class="small mb-1">Dr. Manthan Prajapati, MD | International Medical Graduate</p>
-        <p class="small text-muted">&copy; 2026 Professional Portfolio. All Rights Reserved.</p>
+        <h2 class="section-title">Professional Media & Hobbies</h2>
+        
+        <div class="text-center mb-5">
+            <button class="filter-btn active" onclick="filterGallery('all')">View All</button>
+            <button class="filter-btn" onclick="filterGallery('russia')">Russia Education</button>
+            <button class="filter-btn" onclick="filterGallery('clinical')">US & India Clinical</button>
+            <button class="filter-btn" onclick="filterGallery('hobbies')">Hobbies & Events</button>
+        </div>
+
+        <div class="row" id="gallery-wrapper">
+            <div class="col-md-4 gallery-item russia"><img src="russia-edu-1.jpg" class="gallery-img" loading="lazy"></div>
+            <div class="col-md-4 gallery-item russia"><img src="russia-edu-2.jpg" class="gallery-img" loading="lazy"></div>
+            <div class="col-md-4 gallery-item russia"><img src="russia-edu-3.jpg" class="gallery-img" loading="lazy"></div>
+            <div class="col-md-4 gallery-item clinical"><img src="us-clinical-1.jpg" class="gallery-img" loading="lazy"></div>
+            <div class="col-md-4 gallery-item clinical"><img src="india-clinical-1.jpg" class="gallery-img" loading="lazy"></div>
+            
+            <div class="col-md-4 gallery-item hobbies"><img src="hobby-1.jpg" class="gallery-img" loading="lazy"></div>
+            <div class="col-md-4 gallery-item hobbies"><img src="hobby-2.jpg" class="gallery-img" loading="lazy"></div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h4 class="fw-bold text-primary border-bottom pb-2">Academic Leadership</h4>
+                <p class="small text-muted">Led cultural festivals (Diwali, Navratri) at Penza State for 600+ students. [span_0](start_span)[span_1](start_span)Managed budgeting, logistics, and university-wide sports tournaments[span_0](end_span)[span_1](end_span).</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h4 class="fw-bold text-primary border-bottom pb-2">US Clinical Foundations</h4>
+                <p class="small text-muted">Hands-on experience at UChicago Medicine and Rush University. [span_2](start_span)[span_3](start_span)[span_4](start_span)Managed cardio-renal syndrome and performed diagnostic workups via EPIC EMR[span_2](end_span)[span_3](end_span)[span_4](end_span).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer text-center">
+    <div class="container">
+        <p class="fw-bold mb-1">Dr. Manthan Prajapati, MD</p>
+        <p class="small text-muted mb-4">prajapatimanthan9@gmail.com | Ahmedabad, Gujarat</p>
+        <a href="Dr_Manthan_CV.pdf" class="btn btn-warning fw-bold px-5 py-3" download>DOWNLOAD FULL CV</a>
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function filterGallery(category) {
+        const items = document.querySelectorAll('.gallery-item');
+        const buttons = document.querySelectorAll('.filter-btn');
+        
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        items.forEach(item => {
+            if (category === 'all' || item.classList.contains(category)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+</script>
+
 </body>
 </html>
